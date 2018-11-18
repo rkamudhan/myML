@@ -670,7 +670,7 @@ plt.legend(loc='best')
 
 
 
-![png](output_37_1.png)
+![png](mylearning/images/output_37_1.png)
 
 
 Here we can infer that there is an increasing trend in the series, i.e., the number of count is increasing with respect to time. We can also see that at certain points there is a sudden increase in the number of counts. The possible reason behind this could be that on particular day, due to some event the traffic was high.
@@ -696,7 +696,7 @@ train.groupby('Year')['Count'].mean().plot.bar()
 
 
 
-![png](output_41_1.png)
+![png](mylearning/images/output_41_1.png)
 
 
 We see an exponential growth in the traffic with respect to year which validates our hypothesis.
@@ -716,7 +716,7 @@ train.groupby('Month')['Count'].mean().plot.bar()
 
 
 
-![png](output_43_1.png)
+![png](mylearning/images/output_43_1.png)
 
 
 Here we see a decrease in the mean of passenger count in last three months. This does not look right. Let’s look at the monthly mean of each year separately.
@@ -733,7 +733,7 @@ t1=temp.plot.bar()
 ```
 
 
-![png](output_46_0.png)
+![png](mylearning/images/output_46_0.png)
 
 
 We can also see this increasing trend by visualizing the line graph as shown below.
@@ -744,7 +744,7 @@ t2=temp.plot(figsize=(15,10),title='Passenger Count(Monthly in each year)',fonts
 ```
 
 
-![png](output_48_0.png)
+![png](mylearning/images/output_48_0.png)
 
 
 In the above line plot we can see an increasing trend in monthly passenger count and the growth is approximately exponential.
@@ -764,7 +764,7 @@ train.groupby('Day')['Count'].mean().plot.bar(figsize=(15,5),title='Passenger Co
 
 
 
-![png](output_50_1.png)
+![png](mylearning/images/output_50_1.png)
 
 
 We are not getting much insights from day wise count of the passengers.
@@ -784,7 +784,7 @@ train.groupby('Hour')['Count'].mean().plot.bar(figsize=(15,5),title='Passenger C
 
 
 
-![png](output_52_1.png)
+![png](mylearning/images/output_52_1.png)
 
 
 - It can be inferred that the peak traffic is at 7 PM and then we see a decreasing trend till 5 AM.
@@ -808,7 +808,7 @@ train.groupby('Weekend')['Count'].mean().plot.bar(figsize=(10,5),title='Passenge
 
 
 
-![png](output_54_1.png)
+![png](mylearning/images/output_54_1.png)
 
 
 It can be inferred from the above plot that the traffic is more on weekdays as compared to weekends which validates our hypothesis.
@@ -830,7 +830,7 @@ train.groupby('Day_of_week')['Count'].mean().plot.bar(figsize=(10,5),cmap='coolw
 
 
 
-![png](output_56_1.png)
+![png](mylearning/images/output_56_1.png)
 
 
 From the above bar plot, we can infer that the passenger count is less for saturday and sunday as compared to the other days of the week. 
@@ -881,7 +881,7 @@ plt.show()
 ```
 
 
-![png](output_62_0.png)
+![png](mylearning/images/output_62_0.png)
 
 
 We can see that the time series is becoming more and more stable when we are aggregating it on daily, weekly and monthly basis.
@@ -950,7 +950,7 @@ plt.show()
 ```
 
 
-![png](output_71_0.png)
+![png](mylearning/images/output_71_0.png)
 
 
 Here the blue part represents the train data and the orange part represents the validation data.
@@ -1001,7 +1001,7 @@ plt.show()
 ```
 
 
-![png](output_79_0.png)
+![png](mylearning/images/output_79_0.png)
 
 
 We can calculate how accurate our predictions are using rmse(Root Mean Square Error).
@@ -1090,15 +1090,15 @@ plt.legend(loc='best')
 
 
 
-![png](output_86_1.png)
+![png](mylearning/images/output_86_1.png)
 
 
 
-![png](output_86_2.png)
+![png](mylearning/images/output_86_2.png)
 
 
 
-![png](output_86_3.png)
+![png](mylearning/images/output_86_3.png)
 
 
 We took the average of last 10, 20 and 50 observations and predicted based on that. This value can be changed in the above code in .rolling().mean() part. We can see that the predictions are getting weaker as we increase the number of observations.
@@ -1143,7 +1143,7 @@ plt.show()
 ```
 
 
-![png](output_91_0.png)
+![png](mylearning/images/output_91_0.png)
 
 
 
@@ -1189,7 +1189,7 @@ plt.show()
 ```
 
 
-![png](output_95_0.png)
+![png](mylearning/images/output_95_0.png)
 
 
 An increasing trend can be seen in the dataset, so now we will make a model based on the trend.
@@ -1210,7 +1210,7 @@ plt.show()
 ```
 
 
-![png](output_97_0.png)
+![png](mylearning/images/output_97_0.png)
 
 
 We can see an inclined line here as the model has taken into consideration the trend of the time series.
@@ -1750,7 +1750,7 @@ plt.show()
 ```
 
 
-![png](output_120_0.png)
+![png](mylearning/images/output_120_0.png)
 
 
 
@@ -1885,7 +1885,7 @@ test_stationarity(train_original['Count']) #CALLING THE FUNCTION
 ```
 
 
-![png](output_134_0.png)
+![png](mylearning/images/output_134_0.png)
 
 
     Results of Dickey-Fuller Test:
@@ -1920,7 +1920,7 @@ plt.show()
 ```
 
 
-![png](output_137_0.png)
+![png](mylearning/images/output_137_0.png)
 
 
 So we can observe an increasing trend. Now we will remove this increasing trend to make our time series stationary.
@@ -1937,7 +1937,7 @@ test_stationarity(train_log_moving_avg_diff)
 ```
 
 
-![png](output_140_0.png)
+![png](mylearning/images/output_140_0.png)
 
 
     Results of Dickey-Fuller Test:
@@ -1964,7 +1964,7 @@ test_stationarity(train_log_diff.dropna())
 ```
 
 
-![png](output_142_0.png)
+![png](mylearning/images/output_142_0.png)
 
 
     Results of Dickey-Fuller Test:
@@ -2012,7 +2012,7 @@ plt.show()
 ```
 
 
-![png](output_144_0.png)
+![png](mylearning/images/output_144_0.png)
 
 
 We can see the trend, residuals and the seasonality clearly in the above graph. Seasonality shows a constant trend in counter.
@@ -2029,7 +2029,7 @@ test_stationarity(train_log_decompose[0])
 ```
 
 
-![png](output_146_0.png)
+![png](mylearning/images/output_146_0.png)
 
 
     Results of Dickey-Fuller Test:
@@ -2084,11 +2084,11 @@ plt.show()
 ```
 
 
-![png](output_150_0.png)
+![png](mylearning/images/output_150_0.png)
 
 
 
-![png](output_150_1.png)
+![png](mylearning/images/output_150_1.png)
 
 
 - p value is the lag value where the PACF chart crosses the upper confidence interval for the first time. It can be noticed that in this case p=1.
@@ -2111,7 +2111,7 @@ plt.show()
 ```
 
 
-![png](output_153_0.png)
+![png](mylearning/images/output_153_0.png)
 
 
 Lets plot the validation curve for AR model.
@@ -2139,7 +2139,7 @@ plt.show()
 ```
 
 
-![png](output_156_0.png)
+![png](mylearning/images/output_156_0.png)
 
 
 Here the red line shows the prediction for the validation set. Let’s build the MA model now.
@@ -2159,7 +2159,7 @@ plt.show()
 ```
 
 
-![png](output_159_0.png)
+![png](mylearning/images/output_159_0.png)
 
 
 
@@ -2181,7 +2181,7 @@ plt.show()
 ```
 
 
-![png](output_161_0.png)
+![png](mylearning/images/output_161_0.png)
 
 
 
@@ -2197,7 +2197,7 @@ plt.show()
 ```
 
 
-![png](output_162_0.png)
+![png](mylearning/images/output_162_0.png)
 
 
 Let’s define a function which can be used to change the scale of the model to the original scale.
@@ -2272,7 +2272,7 @@ plt.show()
     
 
 
-![png](output_171_1.png)
+![png](mylearning/images/output_171_1.png)
 
 
 - Order in the above model represents the order of the autoregressive model(number of time lags), the degree of differencing(number of times the data have had past values subtracted) and the order of moving average model.
@@ -2352,7 +2352,7 @@ plt.show()
     
 
 
-![png](output_179_1.png)
+![png](mylearning/images/output_179_1.png)
 
 
 
